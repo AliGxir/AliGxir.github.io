@@ -55,7 +55,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 3.5rem;
+    padding: 1.5rem 1rem;
     background-color: var(--bg-color);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
@@ -77,9 +77,19 @@ nav a:hover {
 nav ul {
     display: flex;
     gap: 1.9rem;
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
 }
 
 nav ul li {
+    margin: 8px;
     font-weight: var(--bold-font);
 }
 
@@ -89,8 +99,13 @@ nav ul li {
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    display: none;
+    display: block;
 }
+
+nav ul.show {
+    transform: translateX(0);
+}
+
 
 .hero {
     display: flex;
@@ -108,19 +123,40 @@ nav ul li {
 
 .bio {
     width: 25rem;
-    padding: 0.625rem;
-    border-radius: 6px;
-    box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+    padding: 1rem;
+    /* Increased padding for better spacing */
+    border-radius: 10px;
+    /* Slightly larger radius for smoother corners */
+    box-shadow: 0px 4px 20px 3px var(--primary-shadow);
+    /* Softer shadow */
+    background-color: var(--background-light);
+    /* Add a light background for contrast */
+    color: var(--text-primary);
+    /* Ensure text color contrasts the background */
+    font-family: 'Arial', sans-serif;
+    /* Choose a clean, readable font */
 }
 
 .bio h1 {
-    margin-bottom: var(--bottom-margin);
+    margin-bottom: 1rem;
+    /* Standardize spacing */
+    font-size: 1.8rem;
+    /* Larger font for heading */
+    font-weight: bold;
+    /* Make the heading stand out */
+    color: var(--accent-color);
+    /* Add an accent color for emphasis */
 }
 
 .bio p {
-    line-height: var(--line-height);
-    padding: 0.3rem 0;
+    line-height: 1.6;
+    /* Improved readability with larger line height */
+    padding: 0.5rem 0;
+    /* Slightly increase spacing between paragraphs */
+    font-size: 1rem;
+    /* Standard font size for text */
 }
+
 
 .skills {
     max-width: 68.75rem;
@@ -278,4 +314,20 @@ footer {
     padding: 1.25rem;
     text-align: center;
     margin: 2rem 0 0;
+}
+
+.scroll-up {
+    position: fixed;
+    right: 0.5%;
+    bottom: 3%;
+    cursor: pointer;
+}
+
+.up-arrow {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media screen and (max-width: 720px) {
+    /*changes reflects on screen with a width of 720px and below*/
 }
