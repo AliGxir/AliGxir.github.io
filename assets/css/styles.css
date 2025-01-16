@@ -122,7 +122,8 @@ nav ul.show {
 
 .bio {
     width: 25rem;
-    padding: 0.625rem;
+    padding: 1rem;
+    margin-top: 1rem;
     border-radius: 6px;
     box-shadow: 0px 2px 15px 2px var(--primary-shadow);
 }
@@ -338,7 +339,7 @@ footer {
     }
 
     .hero {
-        margin-top: -4rem;
+        margin-top: -7rem;
         flex-direction: column;
         gap: 0;
     }
@@ -349,21 +350,8 @@ footer {
     }
 
     .bio {
-        margin-top: -7rem;
+        margin-top: 1rem;
         width: 20.5rem;
-    }
-
-    .more-about {
-        margin-top: 2rem;
-        padding: 1rem 3.5rem;
-    }
-
-    .more-about h2 {
-        text-align: center;
-    }
-
-    .more-about p {
-        text-align: justify;
     }
 
     .icon {
