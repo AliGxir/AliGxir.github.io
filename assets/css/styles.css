@@ -26,7 +26,6 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 2px solid red; */
 }
 
 ul {
@@ -55,7 +54,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 3.5rem;
     background-color: var(--bg-color);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
@@ -99,7 +98,7 @@ nav ul li {
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    display: block;
+    display: none;
 }
 
 nav ul.show {
@@ -114,53 +113,27 @@ nav ul.show {
     gap: 2.5rem;
     max-width: 68.75rem;
     margin: auto;
-    margin-top: -4rem;
-    flex-direction: column;
-    gap: 0;
 }
 
 .hero-img {
     height: 37.5rem;
-    width: 30rem;
+    width: 37.5rem;
 }
 
 .bio {
     width: 25rem;
-    padding: 1rem;
-    /* Increased padding for better spacing */
-    border-radius: 10px;
-    /* Slightly larger radius for smoother corners */
-    box-shadow: 0px 4px 20px 3px var(--primary-shadow);
-    /* Softer shadow */
-    background-color: var(--background-light);
-    /* Add a light background for contrast */
-    color: var(--text-primary);
-    /* Ensure text color contrasts the background */
-    font-family: 'Arial', sans-serif;
-    /* Choose a clean, readable font */
-    /* uncomment the next two line for more readable bio for phone/tablet size
-    margin-top: -7rem;
-    width: 20.5rem; */
+    padding: 0.625rem;
+    border-radius: 6px;
+    box-shadow: 0px 2px 15px 2px var(--primary-shadow);
 }
 
 .bio h1 {
-    margin-bottom: 1rem;
-    /* Standardize spacing */
-    font-size: 1.8rem;
-    /* Larger font for heading */
-    font-weight: bold;
-    /* Make the heading stand out */
-    color: var(--accent-color);
-    /* Add an accent color for emphasis */
+    margin-bottom: var(--bottom-margin);
 }
 
 .bio p {
-    line-height: 1.6;
-    /* Improved readability with larger line height */
-    padding: 0.5rem 0;
-    /* Slightly increase spacing between paragraphs */
-    font-size: 1rem;
-    /* Standard font size for text */
+    line-height: var(--line-height);
+    padding: 0.3rem 0;
 }
 
 
@@ -180,10 +153,8 @@ nav ul.show {
 }
 
 .icon {
-    /* width: 11.875rem;
-    height: 11.25rem; */
-    width: 5.875rem;
-    height: 5.25rem;
+    width: 11.875rem;
+    height: 11.25rem;
 }
 
 .icon-card {
@@ -209,7 +180,6 @@ nav ul.show {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
 .projects-title {
@@ -219,9 +189,7 @@ nav ul.show {
 
 .project-container {
     text-align: center;
-    width: 21.875rem; /* for laptops/computers */
-    width: 20.875rem; /* for phone/table */
-    padding: 1rem;
+    width: 21.875rem; 
 }
 
 .project-container p {
@@ -255,7 +223,6 @@ nav ul.show {
 
 .contact-form-container {
     max-width: 40.75rem;
-    max-width: 23.75rem;
     margin: 0 auto;
     padding: 0.938rem;
     border-radius: 5px;
@@ -341,4 +308,77 @@ footer {
 
 @media screen and (max-width: 720px) {
     /*changes reflects on screen with a width of 720px and below*/
+    nav {
+        padding: 1.5rem 1rem;
+    }
+
+    nav ul {
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    nav ul li {
+        margin: 8px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+    
+    nav ul.show {
+        transform: translateX(0);
+    }
+
+    .hero {
+        margin-top: -4rem;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .hero img {
+            height: 37.5rem;
+            width: 30rem;
+        }
+    
+    .bio {
+        margin-top: -7rem;
+        width: 20.5rem;
+    }
+
+    .more-about {
+        margin-top: 2rem;
+        padding: 1rem 3.5rem;
+    }
+    
+    .more-about h2 {
+        text-align: center;
+    }
+    
+    .more-about p {
+        text-align: justify;
+    }
+
+    .icon {
+        width: 5.875rem;
+        height: 5.25rem;
+    }
+
+    .projects-container {
+        flex-direction: column;
+    }
+    
+    .project-container {
+        width: 20.875rem;
+    }
+    
+    .contact-form-container {
+        max-width: 23.75rem;
+    }
 }
