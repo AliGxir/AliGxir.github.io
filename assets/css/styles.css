@@ -114,11 +114,14 @@ nav ul.show {
     gap: 2.5rem;
     max-width: 68.75rem;
     margin: auto;
+    margin-top: -4rem;
+    flex-direction: column;
+    gap: 0;
 }
 
 .hero-img {
     height: 37.5rem;
-    width: 37.5rem;
+    width: 30rem;
 }
 
 .bio {
@@ -135,6 +138,9 @@ nav ul.show {
     /* Ensure text color contrasts the background */
     font-family: 'Arial', sans-serif;
     /* Choose a clean, readable font */
+    /* uncomment the next two line for more readable bio for phone/tablet size
+    margin-top: -7rem;
+    width: 20.5rem; */
 }
 
 .bio h1 {
