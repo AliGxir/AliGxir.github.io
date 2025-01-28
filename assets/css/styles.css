@@ -59,38 +59,6 @@ nav {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* nav h1 {
-    color: var(--primary-color);
-}
-
-nav a {
-    color: var(--primary-color);
-    transition: var(--transition);
-}
-
-nav a:hover {
-    color: var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
-}
-
-nav ul {
-    display: flex;
-    gap: 1.9rem;
-    position: fixed;
-    background-color: var(--bg-color);
-    flex-direction: column;
-    top: 86px;
-    left: 10%;
-    width: 80%;
-    text-align: center;
-    transform: translateX(120%);
-    transition: transform 0.5s ease-in;
-}
-
-nav ul li {
-    margin: 8px;
-    font-weight: var(--bold-font);
-} */
 nav h1 {
     color: var(--primary-color);
 }
